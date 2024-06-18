@@ -19,6 +19,10 @@ if (strlen($senha)<5){
      $erro=1;
 
 }
+if(empty($nome)){ 
+    echo "Favor digitar seu nome"; 
+    $erro=1;
+}
 if(empty($cidade)){ 
     echo "Favor digitar sua cidade"; 
     $erro=1;
