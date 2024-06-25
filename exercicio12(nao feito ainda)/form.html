@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 12</title>
 </head>
 <body>
+  <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+      $pasta = $_POST["pasta"];
+      $num_imagens = $_POST["num_imagens"];
 
-    <div>
-    <form action="form.php" method="post">
-        <div>
+      echo "<table>";
+      echo "<tr>";
 
-        </div>
-    </form>
-    </div>
+      for($i = 1; $i <= $num_imagens; $i++) {
+        echo "<td>";
+        echo "<img src='http://localhost/$pasta/$i.jpg' width='150' height='100'>";
+        echo "</td>";
+      }
+
+      echo "</tr>";
+      echo "</table>";
+    }
+  ?> 
 </body>
 </html>
